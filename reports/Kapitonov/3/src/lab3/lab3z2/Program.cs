@@ -1,0 +1,20 @@
+﻿using lab3z2;
+
+Bus.Buses.Add(new Bus("Jones", 1, 1, "Mercedes", 2020, 10000, BusStatus.EnRoute));
+Bus.Buses.Add(new Bus("Smith", 2, 1, "Mercedes", 2000, 105000, BusStatus.OnTrip));
+Bus.Buses.Add(new Bus("Brown", 3, 2, "BMW", 2011, 1000550, BusStatus.EnRoute));
+Bus.Buses.Add(new Bus("Davis", 4, 2, "Mercedes", 2012, 10022200, BusStatus.OnTrip));
+Bus.Buses.Add(new Bus("White", 5, 3, "BMW", 2018, 10009090, BusStatus.OnTrip));
+Console.WriteLine("All-------------------");
+Bus.ShowAllBuses();
+Console.WriteLine("EnRoute-------------------");
+Bus.ShowAllBusesEnRoute();
+Console.WriteLine("OnTrip-------------------");
+Bus.ShowAllBusesOnTrip();
+Console.WriteLine("RouteNumber 1-------------------");
+Bus.ShowAllBusesWithRouteNumber(1);
+Console.WriteLine("Elder 10 years-------------------");
+Bus.ShowAllBusesElder10Years();
+Console.WriteLine("Mileage > 100000-------------------");
+Bus.ShowAllBusesWithMileage(100000);
+Console.ReadLine();
