@@ -1,8 +1,12 @@
+import java.util.Scanner;
+
 public class Abbreviator {
     public static void main(String[] args) {
-        String input = "Tom Clansys Rainbow Six Siege";
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите строку:");
+        String input = scanner.nextLine();
         String abbreviation = abbreviate(input);
-        System.out.println("Abbreviation: " + abbreviation);
+        System.out.println("Аббревиатура: " + abbreviation);
     }
 
     public static String abbreviate(String str) {
