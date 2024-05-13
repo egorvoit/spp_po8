@@ -11,13 +11,19 @@ public class RealNumberSet {
 
     public boolean add(double number) {
         if (size < numbers.length) {
-            numbers[size] = number;
-            size++;
-            return true;
+            if (!contains(number)) {
+                numbers[size] = number;
+                size++;
+                return true;
+            } else {
+                System.out.println("Число " + number + " уже существует.");
+                return false;
+            }
         } else {
             return false;
         }
     }
+
 
     public boolean remove(double number) {
         for (int i = 0; i < size; i++) {
