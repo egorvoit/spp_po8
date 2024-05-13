@@ -1,30 +1,17 @@
-import java.util.Scanner;
-
 public class MatrixTransposer {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Введите количество строк матрицы:");
-        int rows = scanner.nextInt();
-
-        System.out.println("Введите количество столбцов матрицы:");
-        int cols = scanner.nextInt();
-
-        double[][] originalMatrix = new double[rows][cols];
-
-        System.out.println("Введите элементы матрицы:");
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                originalMatrix[i][j] = scanner.nextDouble();
-            }
-        }
+        double[][] originalMatrix = {
+                {1.0, 2.0, 3.0},
+                {4.0, 5.0, 6.0},
+                {7.0, 8.0, 9.0}
+        };
 
         double[][] transposedMatrix = transpose(originalMatrix);
 
-        System.out.println("Оригинальная матрица:");
+        System.out.println("Original Matrix:");
         printMatrix(originalMatrix);
 
-        System.out.println("\nТранспонированная матрица:");
+        System.out.println("\nTransposed Matrix:");
         printMatrix(transposedMatrix);
     }
 
